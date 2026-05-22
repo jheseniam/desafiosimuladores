@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Técnico: Simuladores Interactivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Desafío Técnico de Programación Web</h1>
+        <p>Desarrollo de Simuladores Interactivos</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Ejercicio 1: Simulador de Transferencia de Calor (Ley de Enfriamiento)</h2>
+            
+            <form id="form-calor" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="t0">Temperatura Inicial (T0):</label>
+                    <input type="number" id="t0" value="120" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ts">Temperatura del Entorno (Ts):</label>
+                    <input type="number" id="ts" value="38" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="k">Constante (k):</label>
+                    <input type="number" id="k" value="0.45" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="t">Tiempo en horas (t):</label>
+                    <input type="number" id="t" value="3" step="any" required>
+                </div>
+                
+                <button type="button" id="btn-calcular-calor">Calcular Temperatura</button>
+            </form>
+
+            <div class="result-container" id="resultado-calor">
+                Esperando datos...
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Ejercicio 2: Calculador de Combinaciones Complejas (Caso Sorteo)</h2>
+            
+            <form id="form-combinaciones" onsubmit="event.preventDefault();">
+                <h3>Grupo 1</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="n1">Elementos (n1):</label>
+                        <input type="number" id="n1" value="59" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="r1">Muestra (r1):</label>
+                        <input type="number" id="r1" value="5" min="0" required>
+                    </div>
+                </div>
+
+                <h3>Grupo 2</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="n2">Elementos (n2):</label>
+                        <input type="number" id="n2" value="35" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="r2">Muestra (r2):</label>
+                        <input type="number" id="r2" value="1" min="0" required>
+                    </div>
+                </div>
+                
+                <button type="button" id="btn-calcular-combinaciones">Calcular Combinaciones Totales</button>
+            </form>
+
+            <div class="result-container" id="resultado-combinaciones">
+                Esperando datos...
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
